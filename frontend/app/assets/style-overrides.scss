@@ -1,5 +1,12 @@
 .v-btn {
   text-transform: none !important;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.v-btn--size-default:not(.v-btn--icon) {
+  --v-btn-height: 40px;
+  padding: 0 24px;
 }
 
 .v-tab {

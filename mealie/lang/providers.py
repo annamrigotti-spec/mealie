@@ -42,7 +42,7 @@ def _load_factory() -> i18n.ProviderFactory:
 
 def get_locale_provider(accept_language: str | None = Header(None)) -> Translator:
     factory = _load_factory()
-    accept_language = accept_language or "en-US"
+    accept_language = accept_language or "pt-BR"
     return factory.get(accept_language)
 
 
@@ -50,7 +50,7 @@ def get_locale_config(accept_language: str | None = Header(None)) -> LocaleConfi
     if accept_language and accept_language in LOCALE_CONFIG:
         return LOCALE_CONFIG[accept_language]
     else:
-        return LOCALE_CONFIG["en-US"]
+        return LOCALE_CONFIG["pt-BR"]
 
 
 @lru_cache

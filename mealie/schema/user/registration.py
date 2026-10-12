@@ -20,7 +20,7 @@ class CreateUserRegistration(MealieModel):
     private: bool = False
 
     seed_data: bool = False
-    locale: str = "en-US"
+    locale: str = "pt-BR"
 
     @field_validator("locale")
     def valid_locale(cls, v):
